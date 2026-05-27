@@ -31,21 +31,21 @@ resource "aws_instance" "app" {
   key_name                    = var.key_name
   vpc_security_group_ids      = [aws_security_group.ec2_sg.id]
 
-  user_data = <<-EOF
-  #!/bin/bash
-  yum update -y
-  yum install python3 git -y
 
-  cd /home/ec2-user
-  git clone https://github.com/Hanisha-Bogadhi/terraform-aws-project.git
+user_data = <<-EOF
+#!/bin/bash
 
-  cd YOUR_REPO/app
-  pip3 install -r requirements.txt
+apt update -y
+apt install -y python3 python3-pip git
 
-  nohup python3 app.py &
-  EOF
+cd /home/ubuntu
 
-  tags = {
-    Name = var.instance_name
-  }
+git clone https://github.com/Hanisha-Bogadhi/terraform-aws-project.git
+
+cd terraform-aws-project
+
+pip3 install -r requirements.txt
+
+nohup python3 app/app.py > app.log 2>&1 &
+EOF
 }
