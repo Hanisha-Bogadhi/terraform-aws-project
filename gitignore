@@ -44,4 +44,6 @@ Thumbs.db
 *.pem
 
 **/terraform.tfvars
-**/*.tfvars
+**/terraform.tfvars.json
+
+terraform/environments/**/terraform.tfvars
