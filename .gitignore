@@ -45,5 +45,3 @@ Thumbs.db
 
 **/terraform.tfvars
 **/terraform.tfvars.json
-
-terraform/environments/**/terraform.tfvars
