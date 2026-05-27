@@ -42,10 +42,10 @@ cd /home/ubuntu
 
 git clone https://github.com/Hanisha-Bogadhi/terraform-aws-project.git
 
-cd terraform-aws-project
+cd terraform-aws-project/app
 
 pip3 install -r requirements.txt
 
-nohup python3 app/app.py > app.log 2>&1 &
+nohup python3 app.py > app.log 2>&1 &
 EOF
 }
