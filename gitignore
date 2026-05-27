@@ -42,4 +42,6 @@ Thumbs.db
 .idea/
 
 *.pem
-terraform.tfvars
+
+**/terraform.tfvars
+**/*.tfvars
