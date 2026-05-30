@@ -392,7 +392,7 @@ terraform destroy
 Type:
 
 ```text
-yess
+yes
 ```
 
 ---
